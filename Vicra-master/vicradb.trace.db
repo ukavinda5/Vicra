@@ -1,0 +1,341 @@
+2019-09-01 21:39:34 database: wrong user or password; user: "SA"
+org.h2.message.DbException: Wrong user name or password [28000-199]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:126)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:299)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:782)
+	at org.h2.server.web.WebApp.login(WebApp.java:1004)
+	at org.h2.server.web.WebApp.process(WebApp.java:219)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name or password [28000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:459)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 20 more
+2019-09-01 21:41:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLFeatureNotSupportedException: Feature not supported: "Index on BLOB or CLOB column: ""name"" TEXT NOT NULL"; SQL statement:
+CREATE TABLE "rawmaterial" (
+	"name"	TEXT,
+	"totalstock"	REAL,
+	PRIMARY KEY("name")
+) [50100-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:504)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.getUnsupportedException(DbException.java:269)
+	at org.h2.index.BaseIndex.checkIndexColumnTypes(BaseIndex.java:76)
+	at org.h2.mvstore.db.MVSecondaryIndex.<init>(MVSecondaryIndex.java:55)
+	at org.h2.mvstore.db.MVTable.addIndex(MVTable.java:381)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:151)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.ddl.CommandWithColumns.createConstraints(CommandWithColumns.java:83)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:129)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1113)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1436)
+	at org.h2.server.web.WebApp.query(WebApp.java:1111)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1073)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1060)
+	at org.h2.server.web.WebThread.process(WebThread.java:173)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.lang.Thread.run(Unknown Source)
+2019-09-01 21:46:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "RAWMATERIAL" not found; SQL statement:
+CREATE TABLE "products" (
+	"PID"	varchar(100),
+	"name"	varchar(100),
+	"weight"	double,
+	"price"	double, rawname varchar(100),
+	PRIMARY KEY("PID"), foreign key (rawname) references rawmaterial(name)
+) [42102-199]
+2019-09-01 21:46:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "RAWMATERIAL" not found; SQL statement:
+CREATE TABLE "products" (
+	"PID"	varchar(100),
+	"name"	varchar(100),
+	"weight"	double,
+	"price"	double, rawname varchar(100),
+	PRIMARY KEY("PID"), foreign key (rawname) references rawmaterial(name)
+) [42102-199]
+2019-09-01 21:46:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "RAWMATERIAL" not found; SQL statement:
+CREATE TABLE "products" (
+	"PID"	varchar(100),
+	"name"	varchar(100),
+	"weight"	double,
+	"price"	double, rawname varchar(100),
+	PRIMARY KEY("PID"), foreign key (rawname) references rawmaterial(name)
+) [42102-199]
+2019-09-01 21:46:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "RAWMATERIAL" not found; SQL statement:
+CREATE TABLE "products" (
+	"PID"	varchar(100),
+	"name"	varchar(100),
+	"weight"	double,
+	"price"	double, rawname varchar(100),
+	PRIMARY KEY("PID"), foreign key (rawname) references rawmaterial(name)
+) [42102-199]
+2019-09-01 21:47:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "RAWMATERIAL" not found; SQL statement:
+CREATE TABLE "products" (
+	"PID"	varchar(100),
+	"name"	varchar(100),
+	"weight"	double,
+	"price"	double, rawname varchar(100),
+	PRIMARY KEY("PID"), foreign key(rawname) references rawmaterial(name)
+) [42102-199]
+2019-09-01 21:47:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE ""products"" (
+	""PID""	VARCHAR(100),
+	""name""	VARCHAR(100),
+	""weight""	DOUBLE,
+	""price""	DOUBLE,[*]\
+	PRIMARY KEY(""PID"")
+) "; SQL statement:
+CREATE TABLE "products" (
+	"PID"	varchar(100),
+	"name"	varchar(100),
+	"weight"	double,
+	"price"	double,\
+	PRIMARY KEY("PID")
+) [42000-199]
+2019-09-01 21:50:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "RAWMATERIAL" not found; SQL statement:
+CREATE TABLE "products" (
+	"PID"	varchar(100),
+	"name"	varchar(100),
+	"weight"	double,
+	"price"	double, rawname varchar(100), foreign key(rawname) references rawmaterial(name),
+	PRIMARY KEY("PID")
+) [42102-199]
+2019-09-01 21:50:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "RAWMATERIAL" not found; SQL statement:
+CREATE TABLE "products" (
+	PID	varchar(100),
+	name	varchar(100),
+	weight	double,
+	price	double, rawname varchar(100), foreign key(rawname) references rawmaterial(name),
+	PRIMARY KEY(PID)
+) [42102-199]
+2019-09-01 21:50:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "RAWMATERIAL" not found; SQL statement:
+CREATE TABLE "products" (
+	PID	varchar(100),
+	name	varchar(100),
+	weight	double,
+	price	double, rawname varchar(100), foreign key(rawname) references rawmaterial("name"),
+	PRIMARY KEY(PID)
+) [42102-199]
+2019-09-01 21:55:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE RAWMATERIAL_INVENTORY (
+	QUANTITY	REAL,
+	DATE	DATE,
+	NAME	TEXT,
+	ID	INTEGER PRIMARY KEY AUTOINCREMENT[*],
+	FOREIGN KEY(NAME) REFERENCES RAWMATERIAL(NAME)
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE rawmaterial_inventory (
+	quantity	REAL,
+	date	date,
+	name	TEXT,
+	id	INTEGER PRIMARY KEY AUTOINCREMENT,
+	FOREIGN KEY(name) REFERENCES rawmaterial(name)
+) [42001-199]
+2019-09-01 21:55:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE RAWMATERIAL_INVENTORY (
+	QUANTITY	DOUBLE,
+	DATE	DATE,
+	NAME	VARCHAR(100),
+	ID	INTEGER PRIMARY KEY AUTOINCREMENT[*],
+	FOREIGN KEY(NAME) REFERENCES RAWMATERIAL(NAME)
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE rawmaterial_inventory (
+	quantity	double,
+	date	date,
+	name	varchar(100),
+	id	INTEGER PRIMARY KEY AUTOINCREMENT,
+	FOREIGN KEY(name) REFERENCES rawmaterial(name)
+) [42001-199]
+2019-09-01 21:55:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE RAWMATERIAL_INVENTORY (
+	QUANTITY	DOUBLE,
+	DATE	DATE,
+	NAME	VARCHAR(100),
+	ID	INT PRIMARY KEY AUTOINCREMENT[*],
+	FOREIGN KEY(NAME) REFERENCES RAWMATERIAL(NAME)
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE rawmaterial_inventory (
+	quantity	double,
+	date	date,
+	name	varchar(100),
+	id	INT PRIMARY KEY AUTOINCREMENT,
+	FOREIGN KEY(name) REFERENCES rawmaterial(name)
+) [42001-199]
+2019-09-01 21:56:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE RAWMATERIAL_INVENTORY (
+	QUANTITY	DOUBLE,
+	DATE	DATE,
+	NAME	VARCHAR(100),
+	ID	INT PRIMARY KEY AUTOINCREMENT[*],
+	FOREIGN KEY(NAME) REFERENCES RAWMATERIAL(NAME)
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE rawmaterial_inventory (
+	quantity	double,
+	date	DATE,
+	name	varchar(100),
+	id	INT PRIMARY KEY AUTOINCREMENT,
+	FOREIGN KEY(name) REFERENCES rawmaterial(name)
+) [42001-199]
+2019-09-01 21:58:45 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE RAWMATERIAL_INVENTORY (
+	QUANTITY DOUBLE,
+	DATE	DATE,
+	NAME VARCHAR(100),
+	ID INT PRIMARY KEY AUTOINCREMENT[*],
+	FOREIGN KEY(NAME) REFERENCES RAWMATERIAL(NAME)
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE rawmaterial_inventory (
+	quantity double,
+	date	DATE,
+	name varchar(100),
+	id INT PRIMARY KEY AUTOINCREMENT,
+	FOREIGN KEY(name) REFERENCES rawmaterial(name)
+) [42001-199]
+2019-09-01 21:59:04 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE RAWMATERIAL_INVENTORY (
+	QUANTITY DOUBLE,
+	DATE	DATE,
+	NAME VARCHAR(100),
+	ID INT PRIMARY KEY AUTOINCREMENT[*],
+	FOREIGN KEY(NAME) REFERENCES RAWMATERIAL(NAME)
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE rawmaterial_inventory (
+	QUANTITY double,
+	date	DATE,
+	name varchar(100),
+	id INT PRIMARY KEY AUTOINCREMENT,
+	FOREIGN KEY(name) REFERENCES rawmaterial(name)
+) [42001-199]
+2019-09-01 21:59:59 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE RAWMATERIAL_INVENTORY (
+	QUANTITY DOUBLE,
+	DATE DATE,
+	NAME VARCHAR(100),
+	ID INT PRIMARY KEY AUTOINCREMENT[*],
+	FOREIGN KEY(NAME) REFERENCES RAWMATERIAL(NAME)
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE rawmaterial_inventory (
+	quantity double,
+	date date,
+	name varchar(100),
+	id INT PRIMARY KEY AUTOINCREMENT,
+	FOREIGN KEY(name) REFERENCES rawmaterial(name)
+) [42001-199]
+2019-09-01 22:00:03 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE RAWMATERIAL_INVENTORY (
+	QUANTITY DOUBLE,
+	DATE DATE,
+	NAME VARCHAR(100),
+	ID INT PRIMARY KEY AUTOINCREMENT[*],
+	FOREIGN KEY(NAME) REFERENCES RAWMATERIAL(NAME)
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE rawmaterial_inventory (
+	quantity double,
+	date date,
+	name varchar(100),
+	id INT PRIMARY KEY AUTOINCREMENT,
+	FOREIGN KEY(name) REFERENCES rawmaterial(name)
+) [42001-199]
+2019-09-01 22:00:05 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE RAWMATERIAL_INVENTORY (
+	QUANTITY DOUBLE,
+	DATE DATE,
+	NAME VARCHAR(100),
+	ID INT PRIMARY KEY AUTOINCREMENT[*],
+	FOREIGN KEY(NAME) REFERENCES RAWMATERIAL(NAME)
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE rawmaterial_inventory (
+	quantity double,
+	date date,
+	name varchar(100),
+	id INT PRIMARY KEY AUTOINCREMENT,
+	FOREIGN KEY(name) REFERENCES rawmaterial(name)
+) [42001-199]
+2019-09-01 22:00:44 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE RAWMATERIAL_INVENTORY (
+	QUANTITY DOUBLE,
+	DATE DATE,
+	NAME VARCHAR(100),
+	ID INT PRIMARY KEY AUTOINCREMENT[*],
+	FOREIGN KEY(NAME) REFERENCES RAWMATERIAL(NAME)
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE rawmaterial_inventory (
+	quantity double,
+	date date,
+	name varchar(100),
+	id INT PRIMARY KEY AUTOINCREMENT,
+	FOREIGN KEY(name) REFERENCES rawmaterial(name)
+) [42001-199]
+2019-09-01 22:06:13 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TRIGGER TOTAL AFTER INSERT ON RAWMATERIAL_INVENTORY FOR EACH ROW BEGIN[*] UPDATE RAWMATERIAL SET TOTALSTOCK=TOTALSTOCK+NEW.QUANTITY WHERE NAME= NEW.NAME "; expected "QUEUE, NOWAIT, AS, CALL"; SQL statement:
+CREATE TRIGGER total AFTER INSERT on rawmaterial_inventory FOR EACH ROW BEGIN UPDATE rawmaterial SET totalstock=totalstock+new.quantity WHERE name= new.name [42001-199]
+2019-09-01 22:06:13 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "END[*]"; expected "EXPLAIN, EXECUTE"; SQL statement:
+END [42001-199]
+2019-09-01 22:06:44 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TRIGGER TOTAL AFTER INSERT ON RAWMATERIAL_INVENTORY FOR EACH ROW BEGIN[*] UPDATE RAWMATERIAL SET TOTALSTOCK=TOTALSTOCK+NEW.QUANTITY WHERE NAME= NEW.NAME END "; expected "QUEUE, NOWAIT, AS, CALL"; SQL statement:
+CREATE TRIGGER total AFTER INSERT on rawmaterial_inventory FOR EACH ROW BEGIN UPDATE rawmaterial SET totalstock=totalstock+new.quantity WHERE name= new.name END [42001-199]
+2019-09-01 22:06:50 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TRIGGER TOTAL AFTER INSERT ON RAWMATERIAL_INVENTORY FOR EACH ROW BEGIN[*] UPDATE RAWMATERIAL SET TOTALSTOCK=TOTALSTOCK+NEW.QUANTITY WHERE NAME= NEW.NAME "; expected "QUEUE, NOWAIT, AS, CALL"; SQL statement:
+CREATE TRIGGER total AFTER INSERT on rawmaterial_inventory FOR EACH ROW BEGIN UPDATE rawmaterial SET totalstock=totalstock+new.quantity WHERE name= new.name [42001-199]
+2019-09-01 22:06:50 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "END[*]"; expected "EXPLAIN, EXECUTE"; SQL statement:
+END [42001-199]
+2019-09-01 22:07:54 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TRIGGER TOTAL AFTER INSERT ON RAWMATERIAL_INVENTORY FOR EACH ROW UPDATE[*] RAWMATERIAL SET TOTALSTOCK=TOTALSTOCK+NEW.QUANTITY WHERE NAME= NEW.NAME "; expected "QUEUE, NOWAIT, AS, CALL"; SQL statement:
+CREATE TRIGGER total AFTER INSERT on rawmaterial_inventory FOR EACH ROW UPDATE rawmaterial SET totalstock=totalstock+new.quantity WHERE name= new.name [42001-199]
+2019-09-01 22:10:46 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TRIGGER 'total'[*] AFTER INSERT ON 'rawmaterial_inventory' FOR EACH ROW UPDATE 'rawmaterial' SET TOTALSTOCK=TOTALSTOCK+NEW.QUANTITY WHERE NAME= NEW.NAME "; expected "identifier"; SQL statement:
+CREATE TRIGGER 'total' AFTER INSERT on 'rawmaterial_inventory' FOR EACH ROW UPDATE 'rawmaterial' SET totalstock=totalstock+new.quantity WHERE name= new.name [42001-199]
+2019-09-01 22:11:29 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TRIGGER 'total'[*]
+AFTER INSERT ON 'rawmaterial_inventory' FOR EACH ROW BEGIN 
+UPDATE 'rawmaterial' SET TOTALSTOCK=TOTALSTOCK+NEW.QUANTITY WHERE NAME= NEW.NAME "; expected "identifier"; SQL statement:
+CREATE TRIGGER 'total'
+AFTER INSERT on 'rawmaterial_inventory' FOR EACH ROW BEGIN 
+UPDATE 'rawmaterial' SET totalstock=totalstock+new.quantity WHERE name= new.name [42001-199]
+2019-09-01 22:11:51 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TRIGGER 'total'[*]
+AFTER INSERT ON 'rawmaterial_inventory' 
+FOR EACH ROW 
+BEGIN 
+UPDATE 'rawmaterial' SET TOTALSTOCK=TOTALSTOCK+NEW.QUANTITY WHERE NAME= NEW.NAME "; expected "identifier"; SQL statement:
+CREATE TRIGGER 'total'
+AFTER INSERT on 'rawmaterial_inventory' 
+FOR EACH ROW 
+BEGIN 
+UPDATE 'rawmaterial' SET totalstock=totalstock+new.quantity WHERE name= new.name [42001-199]
+2019-09-01 22:11:51 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "END[*]"; expected "EXPLAIN, EXECUTE"; SQL statement:
+END [42001-199]
+2019-09-01 22:44:51 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TRIGGER TOTAL AFTER INSERT ON RAWMATERIAL_INVENTORY FOR EACH ROW UPDATE[*] RAWMATERIAL SET TOTALSTOCK=TOTALSTOCK+NEW.QUANTITY WHERE NAME= NEW.NAME "; expected "QUEUE, NOWAIT, AS, CALL"; SQL statement:
+CREATE TRIGGER total AFTER INSERT on rawmaterial_inventory FOR EACH ROW UPDATE rawmaterial SET totalstock=totalstock+new.quantity WHERE name= new.name [42001-199]
+2019-09-01 22:45:08 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TRIGGER TOTAL AFTER INSERT ON RAWMATERIAL_INVENTORY FOR EACH ROW CALL UPDATE RAWMATERIAL[*] SET TOTALSTOCK=TOTALSTOCK+NEW.QUANTITY WHERE NAME= NEW.NAME "; SQL statement:
+CREATE TRIGGER total AFTER INSERT on rawmaterial_inventory FOR EACH ROW call UPDATE rawmaterial SET totalstock=totalstock+new.quantity WHERE name= new.name [42000-199]

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Vicra.jnlp">
+  <information>
+    <title>Vicra</title>
+    <vendor>ukavi</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Vicra.jar" size="614105" download="eager" />
+    <jar href="lib\com.lowagie.text-2.1.7.jar" size="1782376" download="eager" />
+    <jar href="lib\commons-beanutils-1.8.3.jar" size="232019" download="eager" />
+    <jar href="lib\commons-collections-3.2.1-1.0.0.jar" size="590365" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-javaflow-1209105.jar" size="100854" download="eager" />
+    <jar href="lib\commons-logging-1.2.1.1.jar" size="60686" download="eager" />
+    <jar href="lib\controlsfx-8.40.13.jar" size="1213306" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\fontawesomefx-commons-8.13.jar" size="20607" download="eager" />
+    <jar href="lib\fontawesomefx-fontawesome-4.7.0-1.jar" size="135304" download="eager" />
+    <jar href="lib\jasper-compiler-jdt.jar" size="1395272" download="eager" />
+    <jar href="lib\jasperreports-javaflow.jar" size="3081533" download="eager" />
+    <jar href="lib\jasperreports.jar" size="2008066" download="eager" />
+    <jar href="lib\javafx-swt.jar" size="36811" download="eager" />
+    <jar href="lib\javafx.base.jar" size="749889" download="eager" />
+    <jar href="lib\javafx.controls.jar" size="2511137" download="eager" />
+    <jar href="lib\javafx.fxml.jar" size="127395" download="eager" />
+    <jar href="lib\javafx.graphics.jar" size="4295861" download="eager" />
+    <jar href="lib\javafx.media.jar" size="270594" download="eager" />
+    <jar href="lib\javafx.swing.jar" size="119848" download="eager" />
+    <jar href="lib\javafx.web.jar" size="714741" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2211776" download="eager" />
+    <jar href="lib\joda-time-2.9.1.jar" size="625986" download="eager" />
+    <jar href="lib\jrt-fs.jar" size="106196" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.17.jar" size="2321813" download="eager" />
+    <jar href="lib\org-apache-commons-logging.jar" size="60786" download="eager" />
+    <jar href="lib\recurrence-8.4.2.jar" size="159924" download="eager" />
+    <jar href="lib\sqlite-jdbc-3.27.2.1.jar" size="6012107" download="eager" />
+    <jar href="lib\view-8.4.2.jar" size="745112" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Vicra" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="home.Main"  name="Vicra" />
+  <update check="always"/>
+</jnlp>

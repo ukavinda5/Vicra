@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1007.0" prefWidth="1895.0" style="-fx-background-color: #E3F2FD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controllers.ProductionController">
+   <children>
+      <AnchorPane layoutX="62.0" layoutY="59.0" prefHeight="844.0" prefWidth="754.0" style="-fx-background-color: #2D75E8;">
+         <effect>
+            <DropShadow color="#000000d9" height="64.54" radius="27.8825" spread="0.34" width="48.99" />
+         </effect>
+         <children>
+            <Label layoutX="284.0" layoutY="11.0" prefHeight="45.0" prefWidth="192.0" text="Materials" textFill="WHITE">
+               <font>
+                  <Font name="Alef Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="108.0" layoutY="504.0" prefHeight="325.0" prefWidth="649.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="275.0" layoutY="5.0" text="Out">
+               <font>
+                  <Font name="Cooper Black" size="39.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="matcomb2" layoutX="117.0" layoutY="65.0" prefHeight="28.0" prefWidth="416.0" promptText="Choose Here" />
+            <JFXButton fx:id="out1" layoutX="240.0" layoutY="250.0" onAction="#matout" prefHeight="52.0" prefWidth="145.0" stylesheets="@../css/Buttons.css" text="Out" textFill="WHITE" />
+            <JFXTextField fx:id="qty2" layoutX="203.0" layoutY="181.0" maxWidth="345.0" minWidth="225.0" prefHeight="37.0" prefWidth="225.0" promptText="Quantity" />
+            <Label layoutX="428.0" layoutY="189.0" text="Kg" />
+            <JFXDatePicker fx:id="matdate" defaultColor="#2d75e8" layoutX="199.0" layoutY="126.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="877.0" layoutY="57.0" prefHeight="844.0" prefWidth="754.0" style="-fx-background-color: #2D75E8;">
+         <effect>
+            <DropShadow color="#000000d9" height="64.54" radius="27.8825" spread="0.34" width="48.99" />
+         </effect>
+         <children>
+            <AnchorPane  layoutX="53.0" layoutY="444.0" prefHeight="325.0" prefWidth="649.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="275.0" layoutY="5.0" text="Out">
+                     <font>
+                        <Font name="Cooper Black" size="39.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="procomb2" layoutX="110.0" layoutY="74.0" prefHeight="28.0" prefWidth="406.0" promptText="Choose Here" />
+                  <JFXButton fx:id="out2" layoutX="241.0" layoutY="257.0" onAction="#proout" prefHeight="52.0" prefWidth="145.0" stylesheets="@../css/Buttons.css" text="Out" textFill="WHITE" />
+                  <JFXTextField fx:id="qty4" layoutX="229.0" layoutY="195.0" maxWidth="345.0" minWidth="176.0" prefHeight="37.0" prefWidth="192.0" promptText="Quantity" />
+                  <Label layoutX="361.0" layoutY="144.0" text="Available Quantity :" />
+                  <Label layoutX="499.0" layoutY="144.0" text="Label" />
+                  <JFXDatePicker fx:id="prodate" defaultColor="#2d75e8" layoutX="116.0" layoutY="136.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="289.0" layoutY="14.0" prefHeight="45.0" prefWidth="176.0" text="Product" textFill="WHITE">
+               <font>
+                  <Font name="Alef Bold" size="40.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="53.0" layoutY="87.0" prefHeight="325.0" prefWidth="649.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="298.0" text="In">
+                     <font>
+                        <Font name="Cooper Black" size="39.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="procomb1" layoutX="118.0" layoutY="64.0" prefWidth="413.0" promptText="Choose Here" />
+                  <JFXButton fx:id="in2" layoutX="247.0" layoutY="241.0" onAction="#proin" prefHeight="52.0" prefWidth="145.0" stylesheets="@../css/Buttons.css" text="In" textFill="WHITE" />
+                  <JFXTextField fx:id="qty3" layoutX="152.0" layoutY="159.0" maxWidth="345.0" minWidth="345.0" prefHeight="32.0" prefWidth="345.0" promptText="Quantity" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="109.0" layoutY="145.0" prefHeight="325.0" prefWidth="649.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="298.0" text="In">
+               <font>
+                  <Font name="Cooper Black" size="39.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="matcomb1" layoutX="112.0" layoutY="77.0" prefHeight="28.0" prefWidth="415.0" promptText="Choose Here" />
+            <JFXButton fx:id="in1" layoutX="247.0" layoutY="239.0" onAction="#matin" prefHeight="52.0" prefWidth="145.0" stylesheets="@../css/Buttons.css" text="In" textFill="WHITE" />
+            <JFXTextField fx:id="qty1" layoutX="152.0" layoutY="163.0" maxWidth="345.0" minWidth="345.0" prefHeight="32.0" prefWidth="345.0" promptText="Quantity" />
+            <Label layoutX="498.0" layoutY="170.0" text="Kg" />
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../css/fullpackstyling.css" />
+      <URL value="@../css/HomeBut.css" />
+   </stylesheets>
+</AnchorPane>

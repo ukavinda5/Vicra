@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="859.0" prefWidth="1715.0" style="-fx-background-color: #E3F2FD; -fx-border-color: #E3F2FD;" stylesheets="@../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controllers.StockController">
+   <children>
+      <BarChart fx:id="stock" layoutX="42.0" layoutY="520.0" prefHeight="400.0" prefWidth="1033.0" style="-fx-background-color: #E3F2FD;" title="Stock">
+        <xAxis>
+          <CategoryAxis fx:id="s" label="Items" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" label="Stock in Kg" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <TableView fx:id="tview" layoutX="88.0" layoutY="142.0" prefHeight="333.0" prefWidth="708.0" stylesheets="@../../../../../../Documents/NetBeansProjects/Vicra/build/classes/home/css/table.css">
+        <columns>
+          <TableColumn fx:id="nm" prefWidth="265.66669845581055" text="Name" />
+          <TableColumn fx:id="up" prefWidth="217.6666259765625" text="Unitprice" />
+            <TableColumn fx:id="qty" prefWidth="226.3333740234375" text="Quantity" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tview1" layoutX="922.0" layoutY="141.0" prefHeight="333.0" prefWidth="711.0" stylesheets="@../../../../../../Documents/NetBeansProjects/Vicra/build/classes/home/css/table.css">
+         <columns>
+            <TableColumn fx:id="nm1" prefWidth="248.666748046875" text="Name" />
+            <TableColumn fx:id="wg1" prefWidth="146.333251953125" text="Weight" />
+            <TableColumn fx:id="up1" prefWidth="166.666748046875" text="Unitprice" />
+            <TableColumn fx:id="qty1" prefWidth="148.666748046875" text="Packets" />
+         </columns>
+      </TableView>
+      <Label layoutX="680.0" layoutY="26.0" text="Stock Manegment">
+         <font>
+            <Font name="Cooper Black" size="39.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="pie" layoutX="1150.0" layoutY="501.0" />
+   </children>
+</AnchorPane>

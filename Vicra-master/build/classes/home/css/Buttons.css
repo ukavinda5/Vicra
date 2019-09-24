@@ -1,0 +1,41 @@
+.button
+{
+-fx-background-color : #42A5F5;
+-fx-background-radius: 50px;
+-fx-background-insets: 0px;
+
+}
+.button:hover
+{
+-fx-background-color : #1565C0 ;
+-fx-text-fill: #ffffff;
+}
+.button:pressed
+{
+-fx-background-color : #73A3EF ;
+}
+
+/* chart properties */
+
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-legend-visible: false;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart-pie {
+    -fx-border-color: derive(-fx-pie-color, 1%);
+    -fx-border-width: 0px;
+}
+
+.data0.chart-pie {
+    -fx-pie-color: #364FCD;
+}
+
+.data1.chart-pie {
+    -fx-pie-color: #54AAF3;
+}

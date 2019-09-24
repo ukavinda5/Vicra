@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="952.0" prefWidth="2031.0" style="-fx-background-color: #E3F2FD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="196.0" fitWidth="326.0" layoutX="1278.0" layoutY="742.0">
+         <image>
+            <Image url="@../icons/SalesTrendAnalysis2.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="62.0" layoutY="187.0" prefHeight="47.0" prefWidth="967.0" style="-fx-background-color: #2D75E8;">
+         <children>
+            <Label layoutX="353.0" layoutY="4.0" prefHeight="39.0" prefWidth="261.0" text="Sales Monthly Trend" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <BarChart layoutX="62.0" layoutY="262.0" prefHeight="357.0" prefWidth="967.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <BarChart layoutX="64.0" layoutY="714.0" prefHeight="217.0" prefWidth="454.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <AnchorPane layoutX="62.0" layoutY="637.0" prefHeight="47.0" prefWidth="454.0" style="-fx-background-color: #2D75E8;">
+         <children>
+            <Label layoutX="105.0" layoutY="5.0" prefHeight="39.0" prefWidth="261.0" text="Sales Trend In Product" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="562.0" layoutY="637.0" prefHeight="47.0" prefWidth="454.0" style="-fx-background-color: #2D75E8;">
+         <children>
+            <Label layoutX="102.0" layoutY="4.0" prefHeight="39.0" prefWidth="278.0" text="Top 5 Sales By Customer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <BarChart layoutX="562.0" layoutY="714.0" prefHeight="217.0" prefWidth="454.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <JFXButton layoutX="1476.0" layoutY="55.0" prefHeight="47.0" prefWidth="150.0" style="-fx-background-color: #2D75E8;" stylesheets="@../css/Buttons.css" text="Generate" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXDatePicker defaultColor="#2d75e8" layoutX="900.0" layoutY="58.0" />
+      <JFXDatePicker defaultColor="#2d75e8" layoutX="1208.0" layoutY="58.0" />
+      <Label layoutX="1155.0" layoutY="66.0" text="TO">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXComboBox layoutX="177.0" layoutY="61.0" prefHeight="31.0" prefWidth="227.0" />
+      <Label layoutX="62.0" layoutY="64.0" text="Report In">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="achh" layoutX="1150.0" layoutY="237.0" legendVisible="false" prefHeight="408.0" prefWidth="408.0" />
+      <AnchorPane layoutX="1127.0" layoutY="187.0" prefHeight="47.0" prefWidth="454.0" style="-fx-background-color: #2D75E8;">
+         <children>
+            <Label layoutX="102.0" layoutY="4.0" prefHeight="39.0" prefWidth="278.0" text="Top 5 Sales By Customer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

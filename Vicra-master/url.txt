@@ -1,0 +1,9 @@
+jdbc:h2:C:/Users/ukavi/OneDrive/Pictures/Vicra-master/Vicra-master/vicradb
+
+CREATE TABLE rawmaterial_inventory (
+	quantity	double,
+	date	DATE,
+	name	varchar(100),
+	id	INT PRIMARY KEY AUTOINCREMENT,
+	FOREIGN KEY(name) REFERENCES rawmaterial(name)
+) 

@@ -1,0 +1,18 @@
+.button
+{
+-fx-background-color : #42A5F5;
+-fx-font-family:Avenir;
+-fx-font-size: 25;
+-fx-font-color:white;
+}
+.button:hover
+{
+-fx-background-color : #1565C0 ;
+}
+.button:pressed
+{
+-fx-background-color : #73A3EF ;
+}
+#grad {
+  background-image: linear-gradient(to right, red , yellow);
+}
