@@ -50,6 +50,9 @@ public class Home1Controller implements Initializable {
     @FXML
      BorderPane boderpane;
     
+    
+  
+    
 
     @FXML
     void stock(MouseEvent event) {
@@ -142,6 +145,7 @@ public class Home1Controller implements Initializable {
   @Override
     public void initialize(URL url, ResourceBundle rb) {
           loadAch(Ach);
+    
     }
 
      private void loadAch(PieChart pieChart) {

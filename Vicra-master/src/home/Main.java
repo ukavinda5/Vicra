@@ -15,6 +15,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -30,7 +31,8 @@ public class Main extends Application {
         Scene scene = new Scene(root);
        
         stage.setScene(scene);
-        stage.initStyle(StageStyle.UNDECORATED);
+        scene.setFill(Color.TRANSPARENT);
+        stage.initStyle(StageStyle.TRANSPARENT);
         stage.show();
     }
 

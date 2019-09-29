@@ -29,6 +29,14 @@
   -fx-alignment: CENTER_LEFT;
 }
 
+  apane{
+    -fx-background-size: 1200 900;
+    -fx-background-radius: 0 0 18 18;
+    -fx-border-radius: 0 0 18 18;
+    -fx-background-color: #FC3D44;
+  }
+
+
 .table-row-cell:selected {
     -fx-background-color:  rgb(127, 172, 243);
  }

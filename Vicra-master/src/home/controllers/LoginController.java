@@ -21,6 +21,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -31,6 +32,8 @@ import javafx.stage.StageStyle;
  * @author ukavi
  */
 public class LoginController implements Initializable {
+    
+    
     
      @FXML
     private AnchorPane apane;
@@ -87,10 +90,13 @@ public class LoginController implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource(fxml));
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
+            //scene.setFill(Color.TRANSPARENT);
            
            
              stage.initModality(Modality.APPLICATION_MODAL);
-             stage.initStyle(StageStyle.UNDECORATED);
+                //
+                stage.initStyle(StageStyle.TRANSPARENT);
+                //stage.initStyle(StageStyle.UNDECORATED);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

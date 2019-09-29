@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="apane" prefHeight="400.0" prefWidth="673.0" style="-fx-background-color: #2D75E8;" styleClass="mainFxmlClass" stylesheets="@../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controllers.LoginController">
+<AnchorPane id="AnchorPane" fx:id="apane" prefHeight="400.0" prefWidth="673.0" style="-fx-background-color: #2D75E8; -fx-background-radius: 25 25 25 25;" styleClass="mainFxmlClass" stylesheets="@../css/fullpackstyling.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controllers.LoginController">
    <children>
       <Pane layoutX="316.0" layoutY="54.0" prefHeight="310.0" prefWidth="326.0" style="-fx-background-color: #ffffff;">
          <children>
@@ -52,9 +52,9 @@
          </font>
       </Label>
       <FontAwesomeIconView fill="WHITE" glyphName="GG" layoutX="128.0" layoutY="144.0" size="70" wrappingWidth="16.071427872870117" />
-      <JFXButton fx:id="closebtn" layoutX="642.0" onMouseClicked="#Exit" prefHeight="31.0" prefWidth="29.0" stylesheets="@../css/Login.css">
+      <JFXButton fx:id="closebtn" layoutX="607.0" layoutY="8.0" onMouseClicked="#Exit" prefHeight="16.0" prefWidth="20.0" stylesheets="@../css/Login.css">
          <graphic>
-            <ImageView>
+            <ImageView fitHeight="23.0" fitWidth="22.0">
                <image>
                   <Image url="@../icons/close_window_26px.png" />
                </image>
